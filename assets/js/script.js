@@ -11,6 +11,7 @@ function handleSearchFormSubmit(event) {
   var formatInputVal = selectEl.value;
   var searchInputVal = inputEl.value;
 
+
   var queryString = './search-results.html?q=' + searchInputVal + '&format=' + formatInputVal;
 
   location.assign(queryString);
