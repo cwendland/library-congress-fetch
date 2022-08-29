@@ -22,9 +22,71 @@ function printResults(resultObj) {
 function searchApi(query, format) {
     var locQueryUrl =
         "https://cors-anywhere.herokuapp.com/www.loc.gov/search/?fo=json";
-    // todo add parameters 
+
+//************************** TODO ADD PARAMETERS *****************************//
+
+//Defining async function//
+async function getapi(locQueryUrl) {
     
-    // todo fetch call 
+    //Storing response//
+    const response = await fetch(locQueryUrl);
+    
+    //Storing data in form of JSON//
+    var data = await response.json();
+    console.log(data);
+    if (response) {
+        hideloader();
+    }
+    show(data);
+}
+//****************************** TODO FETCH CALL ******************************//
+
+// Calling that async function
+getapi(locQueryUrl);
+  
+// Function to hide the loader
+function hideloader() {
+    document.getElementById('loading').style.display = 'none';
+}
+// Function to define innerHTML for HTML table
+function show(data) {
+    let data = 
+        `<tr>
+          <th>maps</th>
+          <th>audio</th>
+          <th>photos</th>
+          <th>manuscripts</th>
+          <th>newspapers</th>
+          <th>film-and-videos</th>
+          <th>notated-music</th>
+          <th>websites</th>
+         </tr>`;
+    
+    //Loop to access all rows 
+    for (let r of data.list) {
+        tab += `<tr> 
+    <td>${r.maps} </td>
+    <td>${r.audio}</td>
+    <td>${r.photos}</td> 
+    <td>${r.manuscripts}</td>
+    <td>${r.newspapers} </td>
+    <td>${r.film-and-videos}</td>
+    <td>${r.notated-music}</td>
+    <td>${r.websites}</td>         
+</tr>`;
+    }
+    //Setting innerHTML as tab variable//
+    document.getElementById("#search-input").innerHTML = tab;
+    document.getElementById("#format-input").innerHTML = tab;
+    
+}
+
+    
+    
+    
+
+
+
     // printResults();
 }
 
