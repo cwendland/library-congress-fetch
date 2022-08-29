@@ -17,6 +17,7 @@ function printResults(resultObj) {
     console.log(resultObj);
 
     // set up `<div>` to hold result content
+    
 }
 
 function searchApi(query, format) {
