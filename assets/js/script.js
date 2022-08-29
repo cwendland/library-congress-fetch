@@ -7,6 +7,7 @@ function handleSearchFormSubmit(event) {
   event.preventDefault();
 
 //  Code to get values
+<<<<<<< HEAD
 
   // todo define searchInputVal = #search-input
   var searchInputVal = document.querySelector("#search-input");
@@ -16,6 +17,12 @@ function handleSearchFormSubmit(event) {
 
  
 
+=======
+  if (!inputEl.value) {return 0;}
+  var formatInputVal = selectEl.value;
+  var searchInputVal = inputEl.value;
+
+>>>>>>> a8779c774fc5cf54906191e72e7a73eff568bba1
 
   var queryString = './search-results.html?q=' + searchInputVal + '&format=' + formatInputVal;
 
