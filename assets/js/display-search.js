@@ -16,12 +16,16 @@ function getParams() {
 function printResults(resultObj) {
     console.log(resultObj);
 
-    // set up `<div>` to hold result content
+    // todo set up `<div>` to hold result content
 }
 
 function searchApi(query, format) {
     var locQueryUrl =
         "https://cors-anywhere.herokuapp.com/www.loc.gov/search/?fo=json";
+    // todo add parameters 
+    
+    // todo fetch call 
+    // printResults();
 }
 
 function handleSearchFormSubmit(event) {
