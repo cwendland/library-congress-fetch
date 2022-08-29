@@ -18,11 +18,12 @@ function printResults(resultObj) {
 
     // todo make resultTextEl = search input value
 
-    // todo set up `<div>` to hold resultContentEl
+    // todo make a loop for the results : 
+    // todo : instead of placeholder text, use data from searchAPI and index
     var cardBody = $("<div>").addClass("card-body");
-    var cardHeader = $("<h5>").text("title of article").addClass("card-title");
-    var cardDate = $("<p>").text("date of article").addClass("card-text");
-    var cardSummary = $("<p>").text("summary of article").addClass("card-text");
+    var cardHeader = $("<h5>").text("title of article").addClass("card-title text-dark");
+    var cardDate = $("<p>").text("date of article").addClass("card-text text-dark");
+    var cardSummary = $("<p>").text("summary of article").addClass("card-text text-dark");
     var cardButton = $("<a>").text("link to article").addClass("btn btn-primary");
 
     cardBody.append(cardHeader, cardDate, cardSummary, cardButton)
